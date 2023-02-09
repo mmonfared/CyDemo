@@ -1,0 +1,11 @@
+{
+  "resbody": {
+    "user": {
+      "email": "me@automationcamp.com",
+      "username": "automationcamp.com",
+      "bio": null,
+      "image": "https://api.realworld.io/images/smiley-cyrus.jpeg",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1lQGF1dG9tYXRpb25jYW1wLmNvbSIsInVzZXJuYW1lIjoiYXV0b21hdGlvbmNhbXAuY29tIiwiaWF0IjoxNjc1NDUwMTQ3LCJleHAiOjE2ODA2MzQxNDd9.su-DX9a-6JeXTVs1C7txYkcR2A4kWUukg6LY70xAh9U"
+    }
+  }
+}
