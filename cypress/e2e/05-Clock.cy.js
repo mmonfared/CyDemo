@@ -1,6 +1,6 @@
 /// <reference types='cypress'/>
 
-  it.only("Tick forward", () => {
+  it("Tick forward", () => {
     cy.visit('https://www.play1.automationcamp.ir/expected_conditions.html')
     cy.get('#min_wait').clear().type(7)
     cy.get('#max_wait').clear().type(7)

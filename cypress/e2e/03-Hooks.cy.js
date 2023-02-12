@@ -1,5 +1,16 @@
 /// <reference types = 'cypress' />
 
+/*
+├─── Root
+|   |
+|   describe
+|   |    | it
+|   |    | it
+|   |
+|   context
+|       | specify
+*/
+
 // Root level hooks
 before( function (){
     cy.log('Root level suite SETUP')

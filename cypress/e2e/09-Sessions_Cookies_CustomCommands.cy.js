@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+// + Custom Commands
+
 let user1 = "mohammad@dataart.com"
 let user2 = "monfared@dataart.com"
 let pass = "mytest123"
@@ -96,7 +98,7 @@ describe("cy.session() - API", function() {  // 3 Seconds
     })
 })
 
-describe.only('Multiple Session', function() {
+describe('Multiple Session', function() {
     it('Multiple Session', () => {
         // Create
         cy.loginUsingAPI(user1, pass) // Custom Commands

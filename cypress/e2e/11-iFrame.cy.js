@@ -1,8 +1,10 @@
 /// <reference types="Cypress" />
 
-describe("iFrame - Single", function() {
+// Two ways: 1.jQuery element 2.contentDocument
 
-    it("1-1 Using yielded jQuery element", function() {
+describe("1. Single iFrame", function() {
+
+    it("1.1 Using yielded jQuery element", function() {
         cy.visit("https://www.play1.automationcamp.ir/frames.html")
         cy.get("#frame1").then(function($iFrame){
             const iFrameContents = $iFrame.contents().find('body')
@@ -10,7 +12,7 @@ describe("iFrame - Single", function() {
         })
     })
 
-    it("1-2 Using 'contentDocument' property and its()", function() {
+    it("1.2 Using 'contentDocument' property and its()", function() {
         cy.visit("https://www.play1.automationcamp.ir/frames.html")
         cy.get("#frame1")
             .its('0.contentDocument')
@@ -22,7 +24,7 @@ describe("iFrame - Single", function() {
     })
 })
 
-describe("iFrame - Nested", function() {
+describe("2. Nested iFrames", function() {
 
     it("2.1 Nested iFrames - Using yielded jQuery element", function() {
         cy.visit("https://www.play1.automationcamp.ir/frames.html")
@@ -36,7 +38,7 @@ describe("iFrame - Nested", function() {
         })
     })
 
-    it.only("2.2 Nested iFrames - Using 'contentDocument' property and its()", function() {
+    it("2.2 Nested iFrames - Using 'contentDocument' property and its()", function() {
         cy.visit("https://www.play1.automationcamp.ir/frames.html")
         cy.get("#frame1")
             .its('0.contentDocument')
