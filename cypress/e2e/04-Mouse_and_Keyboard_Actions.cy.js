@@ -3,35 +3,35 @@
 describe('Mouse and Keyboard Actions', function () {
     it('Keyboard Actions > Type and Enter', function () {
         cy.visit("https://www.google.com/")
-        cy.get("input[name=q]").type("DataArt {enter}")
+        cy.get("[name=q]").type("DataArt {enter}")
     })
     it('Keyboard Actions > Using sequences', function () {
         cy.visit("https://www.google.com/")
-        cy.get("input[name=q]").type("Cypress").type("{backspace}{home}{del}")
+        cy.get("[name=q]").type("Cypress").type("{backspace}{home}{del}")
     })
     it('Keyboard Actions > Clear input', function () {
         cy.visit("https://www.google.com/")
-        cy.get("input[name=q]").type("Cypress")
-        cy.get("input[name=q]").clear()
-        cy.get("input[name=q]").type("Cypress")
-        cy.get("input[name=q]").type("{selectall}{del}")
-        cy.get("input[name=q]").type("Cypress")
-        cy.get("input[name=q]").type("{selectall}{backspace}")
+        cy.get("[name=q]").type("Cypress")
+        cy.get("[name=q]").clear()
+        cy.get("[name=q]").type("Cypress")
+        cy.get("[name=q]").type("{selectall}{del}")
+        cy.get("[name=q]").type("Cypress")
+        cy.get("[name=q]").type("{selectall}{backspace}")
     })
     it('Keyboard Actions > Delay Option', function () {
         cy.visit("https://www.google.com/")
-        cy.get("input[name=q]").type("I'm typing slowly", {delay: 100})
-        cy.get("input[name=q]").clear()
-        cy.get("input[name=q]").type("I'm typing fast", {delay: 0})
+        cy.get("[name=q]").type("I'm typing slowly", {delay: 100})
+        cy.get("[name=q]").clear()
+        cy.get("[name=q]").type("I'm typing fast", {delay: 0})
     })
     it('Keyboard Actions > Repeat', function () {
         cy.visit("https://www.google.com/")
-        cy.get("input[name=q]").type("Cypress ".repeat(6))
+        cy.get("[name=q]").type("Cypress ".repeat(6))
 
     })
     it('Mouse Actions > Clicks', function () {
         // Click
-        cy.visit("https://www.play2.automationcamp.ir/index.html")
+        cy.visit("https://play2.automationcamp.ir/index.html")
         cy.get("input#male").click()
         cy.get("input#male").should('be.checked')
         // Double Click

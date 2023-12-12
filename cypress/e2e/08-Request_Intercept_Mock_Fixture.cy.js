@@ -12,7 +12,7 @@ it("API Request", () => {
 });
 
 it("Intercepting", () => {
-  cy.intercept("https://global.api.clockify.me/auth/token").as("requestAlias");
+  cy.intercept("https://eu-central-1.api.clockify.me/auth/token").as("requestAlias");
   cy.visit("https://app.clockify.me/en/login")
   cy.fixture('cred.json').then((cred) => { // Import fixtures
     cy.get("#email").type(cred.user) // Use fixtures
